@@ -3,6 +3,6 @@
       <div class="form-group col-lg-5 mx-auto">
       <label for="c">Select Account</label>
       <select name="" class="form-control" id="c" #input (change)='updateValues(input.value)'>
-          <option value="{{accounts}}" *ngFor='let account of accounts'>{{account}}</option>
+          <option value="{{account}}" *ngFor='let account of accounts'>{{account}}</option>
       </select>
   </div>
