@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transactions.component.css']
 })
 export class TransactionsComponent implements OnInit {
-
+  accounts:any=['shareef','junnu'];
   constructor() { }
 
   ngOnInit(): void {
   }
+  updateValues(value:string){
 
+  }
 }

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  private income:number=0
-  private expense:number=0
+  income:number=0
+  expense:number=0
   accounts:any=['shareef','junnu'];
 
 
@@ -15,5 +15,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  updateValues(value:string){
+
+  }
+  
 
 }
