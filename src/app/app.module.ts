@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +8,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountDialogComponent } from './dialogs/account-dialog/account-dialog.component';
+import { CategoryDialogComponent } from './dialogs/category-dialog/category-dialog.component';
+import { MatDialogModule } from "@angular/material/dialog";
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +19,19 @@ import { CategoriesComponent } from './components/categories/categories.componen
     NavBarComponent,
     TransactionsComponent,
     AccountsComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AccountDialogComponent,
+    CategoryDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HammerModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[AccountsComponent]
 })
 export class AppModule { }
