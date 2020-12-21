@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Account Dialog</h1>
+<div mat-dialog-content>
+  <p>Add Account Name Here</p>
+  <mat-form-field>
+    <mat-label>Account Name</mat-label>
+    <input matInput [(ngModel)]="accountName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button >Cancel</button>
+  <button mat-button  cdkFocusInitial>Add</button>
+</div>

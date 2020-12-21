@@ -1,0 +1,10 @@
+tbody tr:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+#category-add-button{
+    position: fixed;
+    bottom: 10px;
+    left: 95%;
+    margin-left: -104.5px;
+}
