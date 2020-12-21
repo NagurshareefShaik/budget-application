@@ -3,12 +3,12 @@
       <div class="form-group col-lg-5 mx-auto">
       <label for="c">Select Account</label>
       <select name="" class="form-control" id="c" #input (change)='updateValues(input.value)'>
-          <option value="{{accounts}}" *ngFor='let account of accounts'>{{account}}</option>
+          <option value="{{account.id}}" *ngFor='let account of accounts'>{{account.accountName}}</option>
       </select>
   </div>
   </div>
         <div class="row">
-            <div class="col">
+            <div class="col m-0 p-2">
               <div class="card text-center bg-danger text-white">
                 <div class="card-body">
                   <h5 class="card-title">Expense</h5>
@@ -16,7 +16,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col m-0 p-2">
               <div class="card text-center bg-success text-white">
                 <div class="card-body">
                   <h5 class="card-title">Income</h5>
@@ -24,11 +24,11 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col m-1 p-2">
                 <div class="card text-center bg-info text-white">
                   <div class="card-body">
                     <h5 class="card-title">Balance</h5>
-                    <p class="card-text">0</p>
+                    <p class="card-text">{{balance}}</p>
                   </div>
                 </div>
               </div>

@@ -15,5 +15,13 @@
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <script> 
+    $(document).ready(function () { 
+        $("ul.navbar-nav > li").click(function (e) { 
+         $("ul.navbar-nav > li").removeClass("active"); 
+         $(this).addClass("active"); 
+          }); 
+      }); 
+  </script> 
 </body>
 </html>

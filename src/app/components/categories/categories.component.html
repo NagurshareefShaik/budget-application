@@ -13,11 +13,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Emi</td>
-            <td>Expense</td>
+          <tr *ngFor="let item of category" (click)="showDialog(item)">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.categoryName}}</td>
+            <td>{{item.categoryType}}</td>
           </tr>
         </tbody>
       </table>
 </div>
+<button type="button" id="category-add-button" class="btn btn-primary" (click)=openDialog()>+</button>

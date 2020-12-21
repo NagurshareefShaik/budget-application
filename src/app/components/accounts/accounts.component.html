@@ -12,11 +12,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
+          <tr *ngFor="let accountData of account" (click)="showDialog(accountData)">
+            <th scope="row">{{accountData.id}}</th>
+            <td>{{accountData.accountName}}</td>
           </tr>
         </tbody>
       </table>
 </div>
-<button type="button" class="btn btn-primary" (click)=openDialog()>Primary</button>
+<button type="button" id="account-add-button" class="btn btn-primary" (click)=openDialog()>+</button>

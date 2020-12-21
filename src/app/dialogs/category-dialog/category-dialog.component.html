@@ -1,1 +1,19 @@
-<p>category-dialog works!</p>
+<h1 mat-dialog-title>Categories Dialog</h1>
+<div mat-dialog-content>
+  <p>Add Categories Here</p>
+  <mat-form-field>
+    <mat-label>Category Name</mat-label>
+    <input matInput type="text" [(ngModel)]="categoryName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Category Type" [(ngModel)]="categoryType">
+      <mat-option *ngFor="let category of categories" [value]="category" >
+        {{ category }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button >Cancel</button>
+  <button mat-button  cdkFocusInitial>Add</button>
+</div>

@@ -12,6 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountDialogComponent } from './dialogs/account-dialog/account-dialog.component';
 import { CategoryDialogComponent } from './dialogs/category-dialog/category-dialog.component';
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule } from "@angular/material/button";
+import { MatInputModule } from "@angular/material/input";
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +34,14 @@ import { MatDialogModule } from "@angular/material/dialog";
     AppRoutingModule,
     BrowserAnimationsModule,
     HammerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[AccountsComponent]
+  entryComponents:[AccountsComponent,CategoriesComponent]
 })
 export class AppModule { }

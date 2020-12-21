@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Account } from 'src/app/model/account.model';
 
 @Component({
   selector: 'app-account-dialog',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public accountData: Account) { }
+  accountName:string=this.accountData.accountName;
 
   ngOnInit(): void {
   }

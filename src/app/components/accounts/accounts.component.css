@@ -1,0 +1,13 @@
+tbody tr:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+#account-add-button{
+    position: fixed;
+    bottom: 10px;
+    left: 95%;
+    margin-left: -104.5px;
+}
+body{
+    width: 100%;
+}
